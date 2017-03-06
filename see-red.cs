@@ -36,29 +36,21 @@ namespace reSharp
         public static void DownloadImages(string imageURL, string userDir)
         {
 
-            if (imageURL.Contains("gfycat.com"))
-            {
-                imageURL = imageURL.Replace("gfycat.com", "zippy.gfycat.com") + ".mp4";
-            }
-
-            if (imageURL.Contains(".gifv"))
-            {
-                imageURL = imageURL.Replace(".gifv", ".mp4");
-            }
-
+            if (imageURL.Contains("gfycat.com")) { imageURL = imageURL.Replace("gfycat.com", "zippy.gfycat.com") + ".mp4"; }
+            if (imageURL.Contains(".gifv")) { imageURL = imageURL.Replace(".gifv", ".mp4"); }
+            
             Console.WriteLine("Downloading {0}", imageURL);
             string fileName = imageURL.Split('/').Last();
-            WebClient client = new WebClient();
             try
             {
-                using (var client = new WebClient())
+                using (WebClient client = new WebClient())
                 {
                     client.DownloadFile(imageURL, Path.Combine(userDir, fileName));
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[INFO] ERROR DOWNLOADING FILE: {ex}");
+                Console.WriteLine($"[INFO] ERROR DOWNLOADING FILE: {ex.Message}");
             }
         }
     }
