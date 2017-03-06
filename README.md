@@ -1,6 +1,10 @@
 # see-red
 Reddit Gfy/Image Downloader (excluding reddituploads)
 
-##TODO:
+## To Use:
+* Configure see-red.cs to user specification (change directory etc.)
+* Run source code
+
+## TODO:
 * reddituploads support
 * Other bug fixes
