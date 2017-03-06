@@ -19,7 +19,7 @@ namespace reSharp
             int amount = (int)Console.ReadLine());
             amount += 1;
 
-            Console.WriteLine("Time Period");
+            Console.Write("Time Period >");
             string timePer = Console.ReadLine();
 
             Reddit reddit = new Reddit();
