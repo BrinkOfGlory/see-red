@@ -12,10 +12,10 @@ namespace reSharp
         {
             string sub = "/r/";
             string saveDir = @"USER_DEFINED_DIR";
-            Console.WriteLine("Subreddit:");
+            Console.Write("Subreddit >");
             sub += Console.ReadLine();
 
-            Console.WriteLine("Amount:");
+            Console.Write("Amount >");
             int amount = (int)Console.ReadLine());
             amount += 1;
 
